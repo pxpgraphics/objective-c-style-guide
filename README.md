@@ -703,9 +703,10 @@ Some of Apple's APIs write garbage values to the error parameter (if non-`NULL`)
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 
 ```objc
+// MQUser singleton instance.
 + (instancetype)sharedInstance
 {
-    static __typeof__(self) sharedInstance = nil;
+    static MQUser *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
