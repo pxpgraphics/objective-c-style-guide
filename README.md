@@ -57,7 +57,7 @@ US English should be used.
 UIColor *myColor = [UIColor blueColor];
 ```
 
-** Not Preferred:**
+**Not Preferred:**
 ```objc
 UIColor *myColour = [UIColor blueColor];
 ```
